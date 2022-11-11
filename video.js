@@ -52,22 +52,23 @@ document.querySelector("#mute").addEventListener("click", function(e) {
 	console.log(label());
 });
 
-document.querySelector("#slider").addEventListener("click", function(e) {
+document.querySelector("#slider").addEventListener("click", function() {
   console.log('Volume is', video.volume)
 	video.volume = this.value / 100;
-  
+  console.log('Volume is', video.volume)
+
 console.log(document.querySelector('#volume'))
   document.querySelector('#volume').innerHTML = video.volume * 100 + '%';
 
 });
 
-document.querySelector("#vintage").addEventListener("click", function(e) {
+document.querySelector("#vintage").addEventListener("click", function() {
   if (!video.classList.contains("oldSchool")) {
     video.classList.add("oldSchool");
   }
 });
 
-document.querySelector("#orig").addEventListener("click", function(e) {
+document.querySelector("#orig").addEventListener("click", function() {
   if (video.classList.contains("oldSchool")) {
     video.classList.remove("oldSchool");
   }
